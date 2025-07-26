@@ -7,7 +7,6 @@ body {
   }
   
   
-  /* Header */
   header {
     background-color: #C8102E; /* Bulls red */
     display: flex;
@@ -43,7 +42,7 @@ body {
     text-decoration: underline;
   }
   
-  /* Hero Section */
+  
   .hero-section {
     text-align: center;
     padding: 50px 20px;
@@ -69,7 +68,7 @@ body {
     margin: 0 auto;
   }
   
-  /* Card Sections */
+
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -106,13 +105,13 @@ body {
     background-color: #a00;
   }
   
-  /* Blog Specific */
+  
   .blog-date {
     font-size: 14px;
     color: #bbb;
   }
   
-  /* Footer */
+ 
   footer {
     text-align: center;
     background-color: #000;
@@ -135,7 +134,7 @@ body {
     text-decoration: underline;
   }
   
-  /* Responsive */
+ 
   @media (max-width: 768px) {
     .card-container {
       flex-direction: column;
