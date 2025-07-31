@@ -146,4 +146,29 @@ body {
       align-items: flex-start;
       gap: 10px;
     }
+
+    .about-info {
+        color: white;
+    }
+    .about-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: nowrap; 
+        overflow-x: auto;  
+        padding: 1rem 0;
+      }
+      
+      .about-photo {
+        width: 30%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .about-photo:hover {
+        transform: scale(1.03);
+      }
   }
