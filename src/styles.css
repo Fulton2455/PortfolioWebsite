@@ -5,6 +5,28 @@ body {
     color: #f4f4f4;
     line-height: 1.6;
   }
+
+  .about-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* Space between images */
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+  
+  .about-photo {
+    flex: 1 1 30%;
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .about-photo:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
   
   
   header {
@@ -150,25 +172,4 @@ body {
     .about-info {
         color: white;
     }
-    .about-gallery {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        flex-wrap: nowrap; 
-        overflow-x: auto;  
-        padding: 1rem 0;
-      }
-      
-      .about-photo {
-        width: 30%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-      
-      .about-photo:hover {
-        transform: scale(1.03);
-      }
   }
