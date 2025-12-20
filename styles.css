@@ -1,9 +1,18 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    
+    transition: background-color 0.3s ease, color 0.3s ease;
     line-height: 1.6;
   }
+
+  theme-toggle:hover {
+  background-color: #fff;
+  color: #C8102E;
+}
+
+#theme-toggle:active {
+  transform: scale(0.96);
+}
 
   .about-gallery {
     display: flex;
@@ -66,7 +75,14 @@ body.dark-mode .blog-card {
   background-color: #222;
   color: #fff;
 }
-  
+  .hero-section,
+.bio,
+.project-card,
+.blog-card,
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
   header {
     background-color: #C8102E; /* Bulls red */
     display: flex;

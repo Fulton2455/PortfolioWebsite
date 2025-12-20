@@ -1,19 +1,26 @@
 // Connor Fulton
 
 // Dark/Light Mode Code
-const toggleButton = document.getElementById('theme-toggle');
+const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
-if (toggleButton) {
-  body.classList.add('light-mode');
+// Load saved theme or default to light
+const savedTheme = localStorage.getItem("theme") || "light";
+body.classList.add(`${savedTheme}-mode`);
 
-  toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
+if (toggleButton) {
+  toggleButton.textContent =
+    savedTheme === "dark" ? "☀ Light" : "🌙 Dark";
+
+  toggleButton.addEventListener("click", () => {
+    const isDark = body.classList.contains("dark-mode");
+
+    body.classList.remove(isDark ? "dark-mode" : "light-mode");
+    body.classList.add(isDark ? "light-mode" : "dark-mode");
+
+    localStorage.setItem("theme", isDark ? "light" : "dark");
 
     toggleButton.textContent =
-      body.classList.contains('dark-mode')
-        ? 'Switch to Light Mode'
-        : 'Switch to Dark Mode';
+  body.classList.contains("dark-mode") ? "☀ Light" : "🌙 Dark";
   });
 }
