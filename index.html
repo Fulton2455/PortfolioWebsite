@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="styles.css"/>
     </head>
-    <body>
+    <body data-page="home">
         <main>
             <header>
                 <div class="branding">
@@ -32,19 +32,13 @@
                     Connor is working his way towards his next large fitness goal of qualifying for the Boston Marathon.</p>
               </div>
               
-              <section id="projects">
-                <h2>Featured Projects</h2>
-                <div class="card-container">
+            <section id="projects">
+              <h2>Featured Projects</h2>
+              <div class="card-container" id="projects-container">
+                <!-- Projects injected by JavaScript -->
+              </div>
+            </section>
               
-                  <div class="project-card">
-                    <img src="Images\depthchart.png" alt="DepthChart Thumbnail">
-                    <h3>Depth Chart Component</h3>
-                    <p>A Java app that reads football rosters and manages depth charts using file I/O and Collections.</p>
-                    <a href="Projects/depthchart.html" class="card-button">View Project</a>
-                  </div>
-              
-                </div>
-              </section>
               <section id="blog">
                 <h2>Recent Blog Posts</h2>
                 <div class="card-container">

@@ -234,3 +234,28 @@ footer {
   cursor: pointer;
   transition: all 0.25s ease;
 }
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.tech-list li {
+  background-color: #C8102E;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.image-caption {
+   font-size: 0.9rem;
+  text-align: center;
+  margin-top: 6px;
+  font-style: italic;
+  line-height: 1.4;
+}
