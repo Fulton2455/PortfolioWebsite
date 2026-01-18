@@ -141,6 +141,15 @@ footer {
     margin: 0 auto;
   }
   
+  body.light-mode .about-info {
+  background-color: #eaeaea;
+  color: #222;
+}
+
+body.dark-mode .about-info {
+  background-color: #1c1c1c;
+  color: #eee;
+}
 
   .card-container {
     display: flex;
@@ -260,9 +269,16 @@ footer {
   line-height: 1.4;
 }
 
+#blog {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
 .blog-image {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
-  margin: 0 auto 10px auto;
+  margin: 20px auto 10px auto;
 }
