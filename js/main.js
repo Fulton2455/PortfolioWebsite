@@ -29,6 +29,30 @@ const projects = [
   }
 ];
 
+// Blog card array
+const blogs = [
+  {
+    id: "quitTrying",
+    title: "Quit Trying",
+    description:
+      "In a world full of people asking you to never stop trying, today I am urging you to quit. ",
+    linkHome: "Blog/quitTrying.html",
+    linkblog: "quitTrying.html",
+    featured: true,
+    date_Category: "October 06, 2025 · Life"
+  },
+  {
+    id: "rootOfAllEvil",
+    title: "The Root of All Evil",
+    description:
+      "All over the internet today, you’ll find videos titled \“Day in the Life\” or \“Week in the Life.\” These clips are meant to show someone’s routine...  ",
+    linkHome: "Blog/rootOfAllEvil.html",
+    linkblog: "rootOfAllEvil.html",
+    featured: true,
+    date_Category: "January 18, 2026 · Life"
+  }
+];
+
 // Dark/Light Mode Code
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
@@ -104,6 +128,54 @@ if (projectsContainer) {
     renderProjects("projects-container", {
       featuredOnly: false,
       imageKey: "imageProjects",
+      linkKey: "linkProjects"
+    });
+  }
+}
+
+// Render blogs
+function renderBlogs(containerId, options = {}) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = "";
+
+  const {
+    featuredOnly = false,
+    linkKey = "linkHome"
+  } = options;
+
+  const filteredBlogs = featuredOnly
+    ? blogs.filter(b => b.featured)
+    : blogs;
+
+  filteredBlogs.forEach(blog => {
+    const card = document.createElement("div");
+    card.classList.add("blog-card");
+
+    card.innerHTML = `
+      <h3>${blog.title}</h3>
+      <p class="blog-date">${blog.date_Category}</p>
+      <p class="blog-excerpt">${blog.description}</p>
+      <a href="${blog[linkKey]}" class="blog-button">Read More</a>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+const blogContainer = document.getElementById("blog-container");
+
+if (blogContainer) {
+  if (page === "home") {
+    renderBlogs("blog-container", {
+      featuredOnly: true,
+      linkKey: "linkHome"
+    });
+  }
+
+  if (page === "blog") {
+    renderBlogs("blog-container", {
+      featuredOnly: false,
       linkKey: "linkProjects"
     });
   }
